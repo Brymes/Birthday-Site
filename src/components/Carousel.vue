@@ -5,9 +5,14 @@
     class="w-full carousel"
   >
     <div
+      v-if="pic.id == btnCount"
       :id="`slide${pic.id}`"
-      class="relative w-full pt-20 carousel-item"
+      class="relative w-full carousel-item"
     >
+      <img
+        :src="pic.pic"
+        class="w-full"
+      >
       <div
         class="
           absolute
@@ -24,15 +29,13 @@
           v-if="pic.id > 0"
           :href="`#slide${pic.id - 1}`"
           class="btn btn-lg btn-circle"
+          @click="btnCount -= 1"
         >❮</a>
-        <img
-          :src="pic.pic"
-          class="w-full"
-        >
         <a
           v-if="pic.id < picsList.length"
           :href="`#slide${pic.id + 1}`"
           class="btn btn-lg btn-circle"
+          @click="btnCount += 1"
         >❯</a>
       </div>
     </div>
@@ -121,7 +124,7 @@
           class="btn btn-circle"
         >❮</a>
         <a
-          href="/components/carousel#slide1"
+          href="/components/carousebl#slide1"
           class="btn btn-circle"
         >❯</a>
       </div>
@@ -137,13 +140,13 @@ export default {
     picsList.push({ id: 0, pic: "src/assets/pic.jpg" });
     return {
       picsList,
+      btnCount: 0,
     };
   },
   beforeMount() {
     for (let i = 1; i < 10; i++) {
       this.picsList.push({ id: i, pic: `src/assets/pic${i}.jpg` });
     }
-    console.log(this.picsList);
   },
 };
 </script>
