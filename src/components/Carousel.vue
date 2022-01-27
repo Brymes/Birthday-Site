@@ -1,81 +1,136 @@
 <template>
-  <Splide :options="{ rewind: true }">
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic1.jpeg">
+  <CCarousel
+    class="object-scale-down"
+    controls
+    dark
+    wrap
+    pause
+    :interval="2500"
+    transition="crossfade"
+  >
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic1.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic2.jpeg">
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic2.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic3.jpeg">
+    </CCarouselItem>
+    <!--  <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic3.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic4.jpeg">
+    </CCarouselItem> -->
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic4.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic5.jpeg">
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic5.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic6.jpeg">
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic6.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic7.jpeg">
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic7.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic8.jpeg">
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic8.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic9.jpeg">
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic9.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic10.jpeg">
+    </CCarouselItem>
+    <!-- <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic10.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-    <SplideSlide>
-      <div class="mx-auto">
-        <img src="../assets/pic11.jpeg">
+    </CCarouselItem> -->
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic11.jpeg"
+          height="600"
+        />
       </div>
-    </SplideSlide>
-  </Splide>
+    </CCarouselItem>
+  </CCarousel>
 </template>
 
 <script>
-import { Splide, SplideSlide } from "@splidejs/vue-splide";
+import { CCarousel, CCarouselItem, CImage } from "@coreui/vue";
 
 export default {
-  name: "Caorusel",
-  components: { Splide, SplideSlide },
+  fluidname: "Caorusel",
+  components: { CCarousel, CCarouselItem, CImage },
   data() {
-    let picsList = ["pic.jpg"];
-    picsList.push({ id: 0, pic: "src/assets/pic.jpg" });
     return {
-      picsList,
-      btnCount: 0,
+      fluidinterval: 1000,
     };
-  },
-  beforeMount() {
-    for (let i = 1; i < 10; i++) {
-      this.picsList.push({ id: i, pic: `src/assets/pic${i}.jpg` });
-    }
   },
 };
 </script>
