@@ -1,140 +1,69 @@
 <template>
-  <div
-    v-for="pic in picsList"
-    :key="pic.id"
-    class="w-full carousel"
-  >
-    <div
-      v-if="pic.id == btnCount"
-      :id="`slide${pic.id}`"
-      class="relative w-full carousel-item"
-    >
-      <img
-        :src="pic.pic"
-        class="w-full"
-      >
-      <div
-        class="
-          absolute
-          flex
-          justify-between
-          transform
-          -translate-y-1/2
-          left-5
-          right-5
-          top-1/2
-        "
-      >
-        <a
-          v-if="pic.id > 0"
-          :href="`#slide${pic.id - 1}`"
-          class="btn btn-lg btn-circle"
-          @click="btnCount -= 1"
-        >❮</a>
-        <a
-          v-if="pic.id < picsList.length"
-          :href="`#slide${pic.id + 1}`"
-          class="btn btn-lg btn-circle"
-          @click="btnCount += 1"
-        >❯</a>
+  <Splide :options="{ rewind: true }">
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic1.jpeg">
       </div>
-    </div>
-    <!-- <div
-      id="slide2"
-      class="relative w-full pt-20 carousel-item"
-    >
-      <img
-        src="https://picsum.photos/id/501/800/300"
-        class="w-full"
-      >
-      <div
-        class="
-          absolute
-          flex
-          justify-between
-          transform
-          -translate-y-1/2
-          left-5
-          right-5
-          top-1/2
-        "
-      >
-        <a
-          href="/components/carousel#slide1"
-          class="btn btn-circle"
-        >❮</a>
-        <a
-          href="/components/carousel#slide3"
-          class="btn btn-circle"
-        >❯</a>
+    </SplideSlide>
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic2.jpeg">
       </div>
-    </div>
-    <div
-      id="slide3"
-      class="relative w-full pt-20 carousel-item"
-    >
-      <img
-        src="https://picsum.photos/id/502/800/300"
-        class="w-full"
-      >
-      <div
-        class="
-          absolute
-          flex
-          justify-between
-          transform
-          -translate-y-1/2
-          left-5
-          right-5
-          top-1/2
-        "
-      >
-        <a
-          href="/components/carousel#slide2"
-          class="btn btn-circle"
-        >❮</a>
-        <a
-          href="/components/carousel#slide4"
-          class="btn btn-circle"
-        >❯</a>
+    </SplideSlide>
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic3.jpeg">
       </div>
-    </div>
-    <div
-      id="slide4"
-      class="relative w-full pt-20 carousel-item"
-    >
-      <img
-        src="https://picsum.photos/id/503/800/300"
-        class="w-full"
-      >
-      <div
-        class="
-          absolute
-          flex
-          justify-between
-          transform
-          -translate-y-1/2
-          left-5
-          right-5
-          top-1/2
-        "
-      >
-        <a
-          href="/components/carousel#slide3"
-          class="btn btn-circle"
-        >❮</a>
-        <a
-          href="/components/carousebl#slide1"
-          class="btn btn-circle"
-        >❯</a>
+    </SplideSlide>
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic4.jpeg">
       </div>
-    </div>-->
-  </div>
+    </SplideSlide>
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic5.jpeg">
+      </div>
+    </SplideSlide>
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic6.jpeg">
+      </div>
+    </SplideSlide>
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic7.jpeg">
+      </div>
+    </SplideSlide>
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic8.jpeg">
+      </div>
+    </SplideSlide>
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic9.jpeg">
+      </div>
+    </SplideSlide>
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic10.jpeg">
+      </div>
+    </SplideSlide>
+    <SplideSlide>
+      <div class="mx-auto">
+        <img src="../assets/pic11.jpeg">
+      </div>
+    </SplideSlide>
+  </Splide>
 </template>
 
 <script>
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+
 export default {
   name: "Caorusel",
+  components: { Splide, SplideSlide },
   data() {
     let picsList = ["pic.jpg"];
     picsList.push({ id: 0, pic: "src/assets/pic.jpg" });
@@ -150,5 +79,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
