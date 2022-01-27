@@ -8,6 +8,9 @@
     "lint": "eslint --ext .vue --ignore-path .gitignore --fix src"
   },
   "dependencies": {
+    "@coreui/coreui": "^4.1.0",
+    "@coreui/vue": "^4.1.2",
+    "@splidejs/vue-splide": "^0.5.15",
     "autoprefixer": "^10.4.0",
     "daisyui": "^1.16.2",
     "postcss": "^8.4.4",
