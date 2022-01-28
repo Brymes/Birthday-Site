@@ -16,7 +16,9 @@
     "daisyui": "^1.16.2",
     "postcss": "^8.4.4",
     "tailwindcss": "^2.2.19",
-    "vue": "^3.2.23"
+    "vee-validate": "^4.4.2",
+    "vue": "^3.2.23",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.10.2",
