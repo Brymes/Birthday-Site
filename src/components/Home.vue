@@ -22,5 +22,18 @@
 
 <script>
 import Carousel from "./Carousel.vue";
-export default { name: "Home", components: { Carousel } };
+import ApiService from "../services/api.service";
+export default {
+  name: "Home",
+  components: { Carousel },
+  methods: {
+    submitMessage(payload) {
+      try {
+        ApiService.addWish(payload);
+      } catch (error) {
+        window.location.reload();
+      }
+    },
+  },
+};
 </script>

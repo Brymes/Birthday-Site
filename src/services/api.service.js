@@ -6,16 +6,21 @@ var myRes = MYRES;
 
 class ApiService {
   async addWish(payload) {
+    var resp;
+
     let addWishConfig = CONFIG;
+
     addWishConfig.data = ADD_WISH(payload);
 
-    await MakeReq(addWishConfig, myRes).catch(function (error) {
-      throw error;
-    });
+    await MakeReq(addWishConfig, myRes)
+      .then(function (response) {
+        resp = response;
+      })
+      .catch(function (error) {
+        throw error;
+      });
 
-    let wishes = this.fetchWishes();
-
-    return { wishes };
+    return resp;
   }
 
   async fetchWishes() {
