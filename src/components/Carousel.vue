@@ -11,6 +11,7 @@
     <CCarouselItem>
       <div>
         <CImage
+        
           align="center"
           fluid
           src="pic1.jpeg"

@@ -12,6 +12,7 @@
     "@coreui/vue": "^4.1.2",
     "@splidejs/vue-splide": "^0.5.15",
     "autoprefixer": "^10.4.0",
+    "axios": "^0.25.0",
     "daisyui": "^1.16.2",
     "postcss": "^8.4.4",
     "tailwindcss": "^2.2.19",

@@ -1,31 +1,24 @@
 <template>
-  <div class="hero min-h-screen">
-    <div class="flex-col hero-content lg:flex-row-reverse">
+  <div class="hero min-h-screen w-4/5 mx-auto py-8">
+    <div class="flex-col hero-content lg:flex-row-reverse bg-white shadow-2xl py-12">
       <Carousel />
-      <div>
-        <h1 class="mb-4 text-3xl font-bold">
-          Drop A Message
-        </h1>
-
-        <textarea
-          class="mb-5 textarea h-20 w-max text-white"
-          placeholder="Bio"
-        />
-
-        <button class="btn btn-primary">
-          Get Started
-        </button>
-      </div>
+      <AllMessages />
     </div>
   </div>
 </template>
 
 <script>
 import Carousel from "./Carousel.vue";
+import AllMessages from "./AllMessages.vue";
 import ApiService from "../services/api.service";
 export default {
   name: "Home",
-  components: { Carousel },
+  components: { Carousel, AllMessages },
+  data() {
+      return {
+          viewAll: true,
+      }
+  },
   methods: {
     submitMessage(payload) {
       try {
