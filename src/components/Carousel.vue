@@ -5,7 +5,7 @@
     dark
     wrap
     pause
-    :interval="2500"
+    :interval="2000"
     transition="crossfade"
   >
     <CCarouselItem>

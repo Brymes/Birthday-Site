@@ -54,16 +54,16 @@
         >Enter Message</span>
       </label>
       <Field
-        class="textarea px-4 h-40 w-60 bg-gray-300"
+        class="textarea ml-3 h-40 w-60 bg-gray-300"
+        type="text"
         placeholder="Enter Your message"
         name="message"
-        type="text"
       />
       <ErrorMessage
         name="message"
         class="error-feedback text-red-600"
       />
-      <button class="mt-4 maxw-60 btn btn-secondary btn-block">
+      <button class="mt-4 max-w-60 btn btn-secondary btn-block">
         Submit
       </button>
     </Form>

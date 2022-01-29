@@ -1,6 +1,6 @@
 <template>
   <div class="w-full mx-4">
-    <p class="text-2xl font-bold uppercase">
+    <p class="text-2xl font-bold">
       Birthday Wishes
     </p>
 
@@ -16,17 +16,17 @@
       <AddMessage v-if="messageInput" />
     </div>
     <div v-if="!messageInput">
-      <div class="card shadow-sm bg-yellow-400 text-red-900 my-8Î">
+      <div
+        v-for="data in messages"
+        :key="data.id"
+        class="card shadow-sm bg-yellow-400 text-red-900 my-8Î"
+      >
         <div class="card-body">
           <p class="text-lg">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
-            fugiat repellat eos mollitia quibusdam, sequi quaerat vel qui rem et
-            provident voluptas quisquam odit obcaecati assumenda repellendus
-            neque possimus soluta a, corporis harum quas amet sit.
-            Necessitatibus incidunt laboriosam voluptatibus?
+            {{ data.message }}
           </p>
           <p class="card-title font-bold text-2xl text-right capitalize">
-            oladunni odetunde
+            {{ data.name }}
           </p>
         </div>
       </div>

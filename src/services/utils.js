@@ -1,6 +1,8 @@
 import axios from "axios";
 
 const API_URL = "http://127.0.0.1:8000/api";
+// const API_URL = "https://elder-olowo-birthday.herokuapp.com/api";
+
 
 export const CONFIG = {
   method: "post",
