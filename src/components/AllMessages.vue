@@ -1,17 +1,20 @@
 <template>
-  <div class="w-full mx-4">
-    <p class="text-2xl font-bold">
+  <div>
+    <div class="flex flex-col justify-center items-start">
+       <p class="text-2xl font-bold">
       Birthday Wishes
     </p>
 
-    <span
-      class="bg-green-400 py-2"
+    <div
       @click="addMessage"
     >
-      <button class="btn btn-xs md:btn-sm lg:btn-md xl:btn-lg">
+      <button class="bg-green-200 h-12 w-48 rounded uppercase">
         {{ buttonText }}
       </button>
-    </span>
+    </div>
+    </div>
+   
+
     <div>
       <AddMessage v-if="messageInput" />
     </div>
@@ -19,7 +22,7 @@
       <div
         v-for="data in messages"
         :key="data.id"
-        class="card shadow-sm bg-yellow-400 text-red-900 my-8Î"
+        class="card shadow-xl my-8"
       >
         <div class="card-body">
           <p class="text-lg">

@@ -1,10 +1,10 @@
 <template>
-  <div class="card mt-8 mb-6">
+  <div class="card mt-8 mb-6 w-full p-6">
     <Form
       :validation-schema="yupSchema"
       @submit="submitMessage"
     >
-      <div>
+      <div class="">
         <label
           class="
             block
@@ -14,7 +14,8 @@
             text-black
             font-bold
             py-2
-            ml-4
+            sm:ml-4
+            ml-0
           "
         >
           Full Name
@@ -30,14 +31,18 @@
             bg-gray-300
             text-sm
             w-60
-            ml-4
+            sm:ml-4
+            ml-0
           "
           placeholder="John"
         />
+        <p>
         <ErrorMessage
           name="name"
           class="error-feedback text-red-600"
         />
+      </p>
+        
       </div>
       <label class="label">
         <span
@@ -49,20 +54,26 @@
             text-black
             font-bold
             mb-2
-            ml-4
+            sm:ml-4
+            ml-0
+
           "
         >Enter Message</span>
       </label>
       <Field
-        class="textarea ml-3 h-40 w-60 bg-gray-300"
+        class="textarea sm:ml-3
+            ml-0 h-40 w-60 bg-gray-300 w-full"
         type="text"
         placeholder="Enter Your message"
         name="message"
       />
-      <ErrorMessage
+      <p>
+        <ErrorMessage
         name="message"
         class="error-feedback text-red-600"
       />
+      </p>
+      
       <button class="mt-4 max-w-60 btn btn-secondary btn-block">
         Submit
       </button>

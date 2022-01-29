@@ -2,12 +2,12 @@
   <div v-if="loading">
     <CSpinner />
   </div>
-  <div class="hero min-h-screen mx-auto bg-purple-300 py-8">
+  <div class="hero min-h-screen bg-purple-300 py-8">
     <div
       class="
         flex-col
         hero-content
-        w-4/5
+        container mx-auto
         lg:flex-row-reverse
         bg-white
         shadow-xl
