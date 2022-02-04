@@ -22,6 +22,17 @@
     <CCarouselItem>
       <div>
         <CImage
+        
+          align="center"
+          fluid
+          src="pic12.jpeg"
+          height="600"
+        />
+      </div>
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
           align="center"
           fluid
           src="pic2.jpeg"
@@ -85,6 +96,16 @@
           align="center"
           fluid
           src="pic8.jpeg"
+          height="600"
+        />
+      </div>
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic12.jpeg"
           height="600"
         />
       </div>
