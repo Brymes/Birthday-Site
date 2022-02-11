@@ -45,16 +45,6 @@
         <CImage
           align="center"
           fluid
-          src="pic10.jpeg"
-          height="600"
-        />
-      </div>
-    </CCarouselItem>
-    <CCarouselItem>
-      <div>
-        <CImage
-          align="center"
-          fluid
           src="pic4.jpeg"
           height="600"
         />
@@ -156,6 +146,66 @@
           align="center"
           fluid
           src="pic11.jpeg"
+          height="600"
+        />
+      </div>
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic12.jpeg"
+          height="600"
+        />
+      </div>
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic13.jpeg"
+          height="600"
+        />
+      </div>
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic14.jpeg"
+          height="600"
+        />
+      </div>
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic15.jpeg"
+          height="600"
+        />
+      </div>
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic16.jpeg"
+          height="600"
+        />
+      </div>
+    </CCarouselItem>
+    <CCarouselItem>
+      <div>
+        <CImage
+          align="center"
+          fluid
+          src="pic17.jpeg"
           height="600"
         />
       </div>
